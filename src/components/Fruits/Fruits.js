@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import FruitCart from '../FruitCart/FruitCart';
 import './Fruits.css'
 
 const Fruits = () => {
 
     const [fruits, setFruits] = useState([])
-console.log(fruits);
+    const [cart, setCart] = useState([]);
+
+    const addToCartHandler =(fruit)=>{
+        const newCart = [...cart,fruit]
+        setCart(newCart);
+    }
     useEffect(()=>{
         fetch('fruitDB.json')
         .then(res => res.json())
@@ -14,12 +20,20 @@ console.log(fruits);
     return (
         <div>
             <h1>This is fruits section</h1>
-            <div className='col-md-8'>
-                <div className='row g-4'>
+            <div className='fruit-container'>
+            
+                <div className='fruitCart-container'>
                 {
-                    fruits.map((fruit)=> <FruitCart key = {fruit.id} fruit = {fruit}></FruitCart>)
+                    fruits.map((fruit)=> <FruitCart key = {fruit.id} fruit = {fruit} addToCartHandler = {addToCartHandler}></FruitCart>)
                 }
                 </div>
+            
+            <div className='cart-container'>
+            {/* {
+        cart.map((item)=>(<h1 key={item.id}>{item.name}</h1>))
+      } */}
+                <Cart cart = {cart}></Cart>
+            </div>
             </div>
         </div>
     );

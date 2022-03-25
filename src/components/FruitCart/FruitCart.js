@@ -2,19 +2,23 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import './FruitCart.css';
 
-const FruitCart = (props) => {
-    const {id,name, img,price,} = props.fruit
+const FruitCart = ({fruit,addToCartHandler}) => {
+    const {id,name, img,price,} = fruit
+    // const {addToCartHandler} = props
     return (
-        <div className='col-md-4'>
-            <Card className='w-100' >
-                <Card.Img className='h-75' src = {img}/>
-                <Card.Body>
-                    <Card.Title>{name}</Card.Title>
-                    <Card.Text>Price:{price} </Card.Text>
-                    <button className='btn btn-primary'>Add To Cart</button>
-                </Card.Body>
-            </Card>
-        </div>
+        
+            <div className='fruit'>
+                <img src={img} alt="" />
+                <div className='fruit-info'>
+                    <p className='fruit-name'>{name}</p>
+                    <p>Price: ${price}</p>
+                </div>
+                <button onClick={()=> addToCartHandler(fruit)} className='btn-cart'>
+                    <p className='btn-text'>Add To Cart</p>
+                    {/* <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon> */}
+                </button>
+            </div>
+       
     );
 };
 
