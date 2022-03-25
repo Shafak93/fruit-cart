@@ -29,9 +29,6 @@ const Fruits = () => {
                 </div>
             
             <div className='cart-container'>
-            {/* {
-        cart.map((item)=>(<h1 key={item.id}>{item.name}</h1>))
-      } */}
                 <Cart cart = {cart}></Cart>
             </div>
             </div>

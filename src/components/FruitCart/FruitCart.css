@@ -1,6 +1,6 @@
 .fruit{
     width: 300px;
-    height: 510px;
+    height: 400px;
     border: 1px solid #95A0A7;
     border-radius: 8px;
     position: relative;
@@ -35,11 +35,8 @@ letter-spacing: 0.0015em;
     position: absolute;
     bottom: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.btn-cart .btn-text{
-    margin-right: 5px;
+    align-items:center;
+    justify-content: space-evenly;
 }
 .btn-cart:hover{
     background-color: orange;

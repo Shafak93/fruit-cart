@@ -1,10 +1,10 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import './FruitCart.css';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 const FruitCart = ({fruit,addToCartHandler}) => {
-    const {id,name, img,price,} = fruit
-    // const {addToCartHandler} = props
+    const {id,name, img,price} = fruit
     return (
         
             <div className='fruit'>
@@ -14,8 +14,8 @@ const FruitCart = ({fruit,addToCartHandler}) => {
                     <p>Price: ${price}</p>
                 </div>
                 <button onClick={()=> addToCartHandler(fruit)} className='btn-cart'>
-                    <p className='btn-text'>Add To Cart</p>
-                    {/* <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon> */}
+                    <p>Add To Cart</p>
+                   <AiOutlineShoppingCart></AiOutlineShoppingCart>
                 </button>
             </div>
        
