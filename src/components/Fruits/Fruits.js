@@ -8,8 +8,20 @@ const Fruits = () => {
     const [fruits, setFruits] = useState([])
     const [cart, setCart] = useState([]);
 
+    //Add to cart handler function
     const addToCartHandler =(fruit)=>{
         const newCart = [...cart,fruit]
+        setCart(newCart);
+    }
+    //Choose one for me button function
+    const chooseOne =(cartItme) =>{
+        console.log(cartItme)
+        function randomIntFromInterval(min, max) { // min and max included 
+            return Math.floor(Math.random() * (max - min + 1) + min)
+          }
+          const rndInt = randomIntFromInterval(0, cartItme.length-1)
+        const cartNum = cartItme[rndInt];
+          const newCart = [cartNum]
         setCart(newCart);
     }
     useEffect(()=>{
@@ -29,7 +41,7 @@ const Fruits = () => {
                 </div>
             
             <div className='cart-container'>
-                <Cart cart = {cart}></Cart>
+                <Cart cartItme = {cart} chooseOne ={chooseOne}></Cart>
             </div>
             </div>
         </div>

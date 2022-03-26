@@ -2,16 +2,15 @@ import React from 'react';
 import CartDetails from '../CartDetails/CartDetails';
 import './Cart.css'
 
-const Cart = (props) => {
-    const {cart} = props
-    console.log(cart)
+const Cart = ({cartItme,chooseOne}) => {
+
     return (
         <div className='cart'>
             {
-        cart.map((item)=> <CartDetails key={item.id} details = {item}></CartDetails> )
+        cartItme.map((item)=> <CartDetails key={item.id} details = {item}></CartDetails> )
       }
             <div>
-                <button className='btn btn-primary my-3'>Choose 1 For Me</button>
+                <button onClick={()=> chooseOne(cartItme)} className='btn btn-primary my-3'>Choose 1 For Me</button>
                 <button className='btn btn-success'>Choose Again</button>
             </div>
         </div>
