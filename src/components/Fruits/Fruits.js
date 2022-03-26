@@ -24,6 +24,12 @@ const Fruits = () => {
           const newCart = [cartNum]
         setCart(newCart);
     }
+
+    //Choose again function
+    const chooseAgain =(cartItme) =>{
+        const cartNum = cartItme.splice(0,0)
+         setCart(cartNum)
+    }
     useEffect(()=>{
         fetch('fruitDB.json')
         .then(res => res.json())
@@ -41,7 +47,7 @@ const Fruits = () => {
                 </div>
             
             <div className='cart-container'>
-                <Cart cartItme = {cart} chooseOne ={chooseOne}></Cart>
+                <Cart cartItme = {cart} chooseOne ={chooseOne} chooseAgain ={chooseAgain}></Cart>
             </div>
             </div>
         </div>
