@@ -4,7 +4,7 @@ import './FruitCart.css';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 const FruitCart = ({fruit,addToCartHandler}) => {
-    const {id,name, img,price} = fruit
+    const {name, img,price} = fruit
     return (
         
             <div className='fruit'>
