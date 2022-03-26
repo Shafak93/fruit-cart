@@ -1,3 +1,8 @@
+# Project Name is : Fruit Cart
+# Live Site Link:
+## Project Description
+This is a fruit cart project. You can add product to the cart by clicking Add to Cart button.In the cart section , you can randomly select one item by clicking choose 1 for me button.If you click Choose Again button all stored item on the cart will erase.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

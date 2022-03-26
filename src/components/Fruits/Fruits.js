@@ -15,13 +15,13 @@ const Fruits = () => {
     }
     //Choose one for me button function
     const chooseOne =(cartItme) =>{
-        function randomIntFromInterval(min, max) { // min and max included 
+        function randomFunc(min, max) { // min and max included 
             return Math.floor(Math.random() * (max - min + 1) + min)
           }
-          const rndInt = randomIntFromInterval(0, cartItme.length-1)
-        const cartNum = cartItme[rndInt];
-          const newCart = [cartNum]
-        setCart(newCart);
+          const randomNum = randomFunc(0, cartItme.length-1)
+        const cartRandomNum = cartItme[randomNum];
+          const newCartRandomNum = [cartRandomNum]
+        setCart(newCartRandomNum);
     }
 
     //Choose again function
