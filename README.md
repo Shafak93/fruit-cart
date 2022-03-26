@@ -1,5 +1,5 @@
 # Project Name is : Fruit Cart
-# Live Site Link:
+# Live Site Link: https://fruit-cart-611174.netlify.app/
 ## Project Description
 This is a fruit cart project. You can add product to the cart by clicking Add to Cart button.In the cart section , you can randomly select one item by clicking choose 1 for me button.If you click Choose Again button all stored item on the cart will erase.
 
