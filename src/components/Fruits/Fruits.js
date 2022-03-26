@@ -15,7 +15,6 @@ const Fruits = () => {
     }
     //Choose one for me button function
     const chooseOne =(cartItme) =>{
-        console.log(cartItme)
         function randomIntFromInterval(min, max) { // min and max included 
             return Math.floor(Math.random() * (max - min + 1) + min)
           }
@@ -36,8 +35,7 @@ const Fruits = () => {
         .then(data => setFruits(data))
     },[])
     return (
-        <div>
-            <h1>This is fruits section</h1>
+        <div >
             <div className='fruit-container'>
             
                 <div className='fruitCart-container'>
