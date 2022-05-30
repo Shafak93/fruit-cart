@@ -1,7 +1,11 @@
 # Project Name is : Fruit Cart
 # Live Site Link: https://fruit-cart-611174.netlify.app/
 ## Project Description
-This is a fruit cart project. You can add product to the cart by clicking Add to Cart button.In the cart section , you can randomly select one item by clicking choose 1 for me button.If you click Choose Again button all stored item on the cart will erase.
+* This is a simple project using react
+* I use here HTML CSS JAVASCRIPT, JSON data, React
+* In this project you can add product to the cart by clicking Add to Cart button.
+* In the cart component ,If you click Choose 1 for me button it will select a product which were selected to the card.The result is selected by randomly. Every time result will different
+* If you click Choose again button , all stored item on the cart will be erased.And you can add product to the cart again.
 
 # Getting Started with Create React App
 
