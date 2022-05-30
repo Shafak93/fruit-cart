@@ -6,6 +6,7 @@
 * In this project you can add product to the cart by clicking Add to Cart button.
 * In the cart component ,If you click Choose 1 for me button it will select a product which were selected to the card.The result is selected by randomly. Every time result will different
 * If you click Choose again button , all stored item on the cart will be erased.And you can add product to the cart again.
+* The product data is loaded by json data dinamically.
 
 # Getting Started with Create React App
 
